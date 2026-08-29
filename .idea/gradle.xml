@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Bubble_Sort" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Bubble_Sort" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Linear_search" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Linear_search" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/PatternsJava" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/PatternsJava" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Recursion" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Recursion" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/String" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/String" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
