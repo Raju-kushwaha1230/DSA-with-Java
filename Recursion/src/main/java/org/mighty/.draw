@@ -1,0 +1,13 @@
+
+1 while the function is not finished excuting it will remains in stack
+2. when fucntion finished executing , it is removed from the stack , and flow programs is remains when fucntion called
+
+
+in recursion
+- base condition in recursion , stop making new calls
+
+
+why recursion
+- it helps slove us biggger/complex problems in a simpler way
+- you can convert recursion solutions into iteration and vice-versa
+- space compexity is not constant
