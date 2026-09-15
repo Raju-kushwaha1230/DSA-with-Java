@@ -26,3 +26,5 @@ public class BSinRecurision {
         return BinarySearch(arr,target, mid+1, e);// right side of array
     }
 }
+
+
