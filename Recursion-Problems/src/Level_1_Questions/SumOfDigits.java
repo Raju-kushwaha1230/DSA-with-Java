@@ -2,7 +2,7 @@ package Level_1_Questions;
 
 public class SumOfDigits {
     static void main() {
-        System.out.println(sum(9876));// 17 + 13 =
+        System.out.println(sum(1243));// 17 + 13 =
     }
     static int sum(int n){
         int a = n;
@@ -10,6 +10,7 @@ public class SumOfDigits {
             return 0;
         }
 
-        return n % 10 + sum(n /  10);
+        return (n % 10) + sum(n /  10);
     }
+
 }
