@@ -2,12 +2,17 @@ package Level_1_Questions;
 
 public class ReverseDigit {
     static void main() {
-        System.out.println(reverse1(1));
+        System.out.println(reverse(1534236469));
     }
     static int sum = 0;
     static int reverse(int n){
 
         if (n == 0){
+            return 0;
+        }
+        int x =  (int)Math.pow(2, 31) - 1;
+
+        if(n > x){
             return 0;
         }
         int rem = (n % 10);
