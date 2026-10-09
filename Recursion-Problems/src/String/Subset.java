@@ -7,7 +7,8 @@ import java.util.List;
 public class Subset {
     static void main() {
         int[] arr = {1,2,3};
-        System.out.println(subset(new ArrayList<>(), arr, 0));
+//        System.out.println(subset(new ArrayList<>(), arr, 0));
+        System.out.println(sub(arr));
     }
 
     static List<List<Integer>> subset(List<Integer> p, int[] up, int index){
@@ -29,5 +30,21 @@ public class Subset {
 
         return left;
 
+    }
+
+    // iterative method
+
+    static List<List<Integer>> sub(int[] arr){
+        List<List<Integer>> outer = new ArrayList<>();
+        outer.add(new ArrayList<>());
+        for ( int x : arr){
+            int n = outer.size();
+            for (int i = 0; i < n; i++) {
+                List<Integer> internal = new ArrayList<>(outer.get(i));
+                internal.add(x);
+                outer.add(internal);
+            }
+        }
+        return outer;
     }
 }
