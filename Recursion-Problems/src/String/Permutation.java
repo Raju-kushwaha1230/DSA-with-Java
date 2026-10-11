@@ -9,6 +9,10 @@ public class Permutation {
         System.out.println(permutre("","abc"));
         System.out.println(permuAnsCount("", "abc"));
         System.out.println(permuteCountBody("", "abc", 0));
+
+        int[] arr = {1,2,3,4};
+
+        System.out.println(permute(new ArrayList<>(), arr, 0));
     }
 
     static void permutatuon(String p,String up){
@@ -73,4 +77,28 @@ public class Permutation {
         }
         return count;
     }
+
+    static List<List<Integer>> permute(List<Integer> p , int[] up, int index) {
+        if (index == up.length){
+            List<List<Integer>> ans = new ArrayList<>();
+            ans.add(p);
+            return ans;
+        }
+
+        int ch = up[index];
+        List<List<Integer>> ans = new ArrayList<>();
+        for (int i = 0; i <= p.size(); i++) {
+
+            List<Integer> left = new ArrayList<>(p);
+            left.add(i, ch);
+
+            ans.addAll(permute(left, up, index + 1));
+
+        }
+        return ans;
+    }
+
+
+
+
 }
