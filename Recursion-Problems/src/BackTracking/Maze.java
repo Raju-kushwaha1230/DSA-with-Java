@@ -11,6 +11,8 @@ public class Maze {
         System.out.println(maze(4,4));
         System.out.println(maze1(new ArrayList<>(), 3,3 ));
         System.out.println(maze2("",3,3));
+        System.out.println(mazeDiag(3,3));
+        System.out.println(mazeDaiStr("",3,3));
     }
 
     static int maze(int r,int c){
@@ -58,6 +60,38 @@ public class Maze {
         }
         if (c > 1){
             ans.addAll(maze2(p + "R", r, c-1));
+        }
+        return ans;
+    }
+
+    static int mazeDiag(int r, int c){
+        if (r==1 || c ==1){
+            return  1;
+        }
+
+        int left = mazeDiag( r -1, c);
+        int dia = mazeDiag(r-1,c-1);
+        int right = mazeDiag(r, c-1);
+
+        return left+ dia + right;
+    }
+
+    static List<String> mazeDaiStr(String p, int r, int c){
+        if (r == 1 && c ==1){
+            List<String> ans = new ArrayList<>();
+            ans.add(p);
+            return  ans ;
+        }
+
+        List<String> ans = new ArrayList<>();
+        if (r >1){
+            ans.addAll(mazeDaiStr(p + "D", r -1, c));
+        }
+        if (c > 1){
+            ans.addAll(mazeDaiStr(p + "R", r, c -1));
+        }
+        if ( r> 1 && c> 1){
+            ans.addAll(mazeDaiStr(p + "d", r-1, c-1));
         }
         return ans;
     }
