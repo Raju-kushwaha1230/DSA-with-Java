@@ -6,7 +6,7 @@ import java.util.List;
 public class Dice {
     static void main() {
 //        dice("",6);
-        System.out.println(dice(new ArrayList<>(), 4));
+        System.out.println(dice(new ArrayList<>(), 3));
     }
     static void dice(String p, int target){
         if (target == 0){
