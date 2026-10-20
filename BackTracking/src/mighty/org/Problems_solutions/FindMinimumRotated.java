@@ -2,7 +2,7 @@ package mighty.org.Problems_solutions;
 
 public class FindMinimumRotated {
     static void main() {
-        int[] nums = {2,2,2,0,1};
+        int[] nums = {3,3,3,1};
         System.out.println(search(nums));
     }
     static int  search(int[] arr){
@@ -62,10 +62,10 @@ public class FindMinimumRotated {
                     return e-1;
                 }
                 e--;
-            }else if( arr[s] > arr[mid] || ( arr[s] == arr[mid] && arr[e] > arr[mid] ) ){
+            } else if (arr[s] < arr[mid] || (arr[s] == arr[mid] && arr[mid] > arr[e])){
                 s = mid + 1;
-            }else{
-                e = mid -1;
+            } else {
+                e = mid - 1;
             }
         }
         return -1;
