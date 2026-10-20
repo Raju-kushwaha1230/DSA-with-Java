@@ -2,8 +2,8 @@ package mighty.org.Problems_solutions;
 
 public class SearchInsertpostions {
     static void main() {
-        int[] num = {1,3,5,6};
-        int target = 8;
+        int[] num = {-1,3,5,6};
+        int target = 0;
         System.out.println(returnPostions(num, target));
     }
     static int returnPostions(int[] nums, int target){
@@ -22,13 +22,9 @@ public class SearchInsertpostions {
             if (target < nums[mid]){
                 e = mid  - 1;
             }
-            if (s == e){
-                if (target >s){
-                    return s+1;
-                }
-                return e-1;
-            }
+
         }
-        return -1;
+
+        return s;
     }
 }
