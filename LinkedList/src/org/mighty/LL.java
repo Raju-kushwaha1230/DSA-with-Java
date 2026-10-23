@@ -86,9 +86,26 @@ public class LL {
         return val;
     }
 
-    public int delete(int val,int index){
+    public Node get(int index){
+
+        Node temp = head;
+
+
+        return temp;
 
     }
+
+    public Node find(int value){
+        Node node = head;
+        while (node != null){
+            if (node.value == value){
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
 
     public void display(){
         Node temp = head;
@@ -97,7 +114,7 @@ public class LL {
             System.out.print(temp.value +" -> ");
             temp = temp.next;
         }
-        System.out.print("END");
+        System.out.println("END");
     }
 
     // create a node first
